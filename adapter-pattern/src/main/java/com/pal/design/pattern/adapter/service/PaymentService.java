@@ -20,6 +20,13 @@ public class PaymentService {
                 .collect(Collectors.toMap(processor -> processor.getClass().getSimpleName(), Function.identity()));
     }
 
+    /**
+     * Process payment using the specified payment gateway
+     *
+     * @param gateway payment gateway
+     * @param request payment request
+     * @return payment response
+     */
     public PaymentResponse processPayment(String gateway, PaymentRequest request) {
         PaymentProcessor paymentProcessor = paymentProcessors.get(gateway + "PaymentAdapter");
         if (paymentProcessor == null) {

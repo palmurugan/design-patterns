@@ -1,0 +1,19 @@
+server:
+  port: 7070
+
+spring:
+  application:
+    name: state-design-pattern
+  h2:
+    console:
+      enabled: true
+  datasource:
+    url: jdbc:h2:mem:poc
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: password
+    jpa:
+      database-platform: org.hibernate.dialect.H2Dialect
+      hibernate:
+        ddl-auto: create-drop
+        show-sql: true
