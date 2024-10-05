@@ -21,6 +21,12 @@ public class StripePaymentAdapter implements PaymentProcessor {
         this.stripeService = stripeService;
     }
 
+    /**
+     * Process payment using Stripe payment gateway
+     *
+     * @param paymentRequest payment request
+     * @return payment response
+     */
     @Override
     public PaymentResponse processPayment(PaymentRequest paymentRequest) {
         log.debug("Processing Stripe payment request: {}", paymentRequest);
