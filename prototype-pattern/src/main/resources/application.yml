@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/poc
+    username: root
+    password: yourpassword
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: create-drop                               # Options: none, validate, update, create, create-drop
+    show-sql: true                                        # Enables SQL logging in the console
+    properties:
+      hibernate:
+        format_sql: true                                  # Formats SQL output in a readable way
+        dialect: org.hibernate.dialect.MySQL8Dialect      # Replace based on your MySQL version (e.g., MySQL5Dialect)
